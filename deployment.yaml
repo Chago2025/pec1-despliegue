@@ -1,0 +1,19 @@
+# Despliegue de la imagen contador-pec1 en Kubernetes con 3 replicas
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contador-pec1-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: contador-pec1
+  template:
+    metadata:
+      labels:
+        app: contador-pec1
+    spec:
+      containers:
+        - name: contador-pec1
+          image: contador-pec1:1.0
+          imagePullPolicy: IfNotPresent
