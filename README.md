@@ -5,7 +5,7 @@ El proyecto consiste en un contador en Python desplegado en Kubernetes mediante 
 
 ### Estructura
 - **contador.py:** script que cuenta del 1 al 10. con **time.sleep(60)**
-- **Dockerfile**: Para empaquetar el script.
+- **Dockerfile**: Contenedor para empaquetar el script.
 - **deployment.yaml**: Configuración para desplegar 3 réplicas en Kubernetes en estado Runing
 
 ### Instrucciones de ejecución
